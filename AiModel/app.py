@@ -359,7 +359,7 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 IMG_SIZE = 299
 # IMPORTANT: Replace this with the actual path to your model file
 MODEL_PATH = r'./Model2/best_fundus_efficientnetb3.pth' 
-MODEL_URL = "https://raw.githubusercontent.com/Mkaif-Qureshi/fundus-image/main/AiModel/Model2/best_fundus_efficientnetb3.pth"
+MODEL_URL = 'https://raw.githubusercontent.com/Mkaif-Qureshi/fundus-image/main/AiModel/Model2/best_fundus_efficientnetb3.pth'
 
 if not os.path.exists(MODEL_PATH):
     os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)
@@ -447,7 +447,7 @@ DISEASE_INFO = {
         'severity': 'high'
     },
     'Maculopathy': {
-        'description': "Disease affecting the macula, the central part of the retina.",
+        'description': 'Disease affecting the macula, the central part of the retina.',
         'symptoms': ['Central vision loss', 'Distorted vision', 'Difficulty reading', 'Problems recognizing faces'],
         'severity': 'high'
     },

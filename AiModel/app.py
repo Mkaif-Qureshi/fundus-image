@@ -359,6 +359,18 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 IMG_SIZE = 299
 # IMPORTANT: Replace this with the actual path to your model file
 MODEL_PATH = r'./Model2/best_fundus_efficientnetb3.pth' 
+MODEL_URL = "https://raw.githubusercontent.com/Mkaif-Qureshi/fundus-image/main/AiModel/Model2/best_fundus_efficientnetb3.pth"
+
+if not os.path.exists(MODEL_PATH):
+    os.makedirs(os.path.dirname(MODEL_PATH), exist_ok=True)
+    st.info("Downloading model weights (~…) from GitHub…")
+    resp = requests.get(MODEL_URL, stream=True)
+    resp.raise_for_status()
+    with open(MODEL_PATH, "wb") as f:
+        for chunk in resp.iter_content(chunk_size=8192):
+            f.write(chunk)
+    st.success("✅ Model downloaded successfully.")
+
 CLASS_NAMES = sorted([
     '0.0.Normal', '0.1.Tessellated fundus', '0.2.Large optic cup', '0.3.DR1', '1.0.DR2', '1.1.DR3',
     '10.0.Possible glaucoma', '10.1.Optic atrophy', '11.Severe hypertensive retinopathy',

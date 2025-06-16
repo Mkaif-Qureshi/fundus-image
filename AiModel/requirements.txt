@@ -33,3 +33,4 @@ langchain
 chromadb
 path
 pathlib
+pysqlite3-binary

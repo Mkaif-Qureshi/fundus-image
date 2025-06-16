@@ -19,6 +19,10 @@ from langchain.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.schema import BaseRetriever
 
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 # ==============================================================================
 # Page Configuration (must be the first Streamlit command)
 # ==============================================================================

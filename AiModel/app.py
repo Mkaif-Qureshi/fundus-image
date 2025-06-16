@@ -349,7 +349,7 @@ st.markdown("""
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 IMG_SIZE = 299
 # IMPORTANT: Replace this with the actual path to your model file
-MODEL_PATH = r'D:/Kaif/Hackathon25/CDAC/AiModel/Model 2/best_fundus_efficientnetb3.pth' 
+MODEL_PATH = r'./Model2/best_fundus_efficientnetb3.pth' 
 CLASS_NAMES = sorted([
     '0.0.Normal', '0.1.Tessellated fundus', '0.2.Large optic cup', '0.3.DR1', '1.0.DR2', '1.1.DR3',
     '10.0.Possible glaucoma', '10.1.Optic atrophy', '11.Severe hypertensive retinopathy',
@@ -366,7 +366,7 @@ CLASS_NAMES = sorted([
 
 # ==== RAG CHATBOT CONFIG ====
 # GROQ_API_KEY = os.environ.get("GROQ_API_KEY")  # or set manually
-GROQ_API_KEY = ''  # or set manually
+GROQ_API_KEY = st.secrets['GROQ_API_KEY']  # or set manually
 MODEL_ID = "llama3-70b-8192"
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 

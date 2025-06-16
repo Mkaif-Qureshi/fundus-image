@@ -2,3 +2,5 @@
 venv/
 AiModel/best_fundus_multilabel_1.pth
 AiModel/keggle/best_fundus_efficientnetb3.pth
+AiModel/chromadb
+AiModel/data

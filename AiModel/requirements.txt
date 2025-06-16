@@ -31,3 +31,5 @@ torchvision
 torchcam 
 langchain 
 chromadb
+path
+pathlib

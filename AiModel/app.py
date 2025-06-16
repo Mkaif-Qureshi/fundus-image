@@ -11,6 +11,8 @@ import io
 import datetime
 import os
 import requests
+import sys
+from pathlib import Path  
 
 # RAG Chatbot imports
 from langchain.embeddings import HuggingFaceEmbeddings
@@ -343,6 +345,9 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+dir = Path(__file__).resolve()
+sys.path.append(str(dir.parent.parent))
+
 # ==============================================================================
 # Configuration and Constants
 # ==============================================================================
@@ -361,7 +366,7 @@ CLASS_NAMES = sorted([
     '24.Chorioretinal atrophy-coloboma', '25.Preretinal hemorrhage', '26.Fibrosis', '27.Laser Spots',
     '28.Silicon oil in eye', '29.0.Blur fundus without PDR', '29.1.Blur fundus with suspected PDR',
     '3.RAO', '4.Rhegmatogenous RD', '5.0.CSCR', '5.1.VKH disease', '6.Maculopathy', '7.ERM', '8.MH',
-    '9.Pathological myopia', '1000images'
+    '9.Pathological myopia', '-'
 ])
 
 # ==== RAG CHATBOT CONFIG ====

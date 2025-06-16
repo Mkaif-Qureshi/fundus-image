@@ -447,7 +447,7 @@ DISEASE_INFO = {
         'severity': 'high'
     },
     'Maculopathy': {
-        'description': 'Disease affecting the macula, the central part of the retina.',
+        'description': "Disease affecting the macula, the central part of the retina.",
         'symptoms': ['Central vision loss', 'Distorted vision', 'Difficulty reading', 'Problems recognizing faces'],
         'severity': 'high'
     },
